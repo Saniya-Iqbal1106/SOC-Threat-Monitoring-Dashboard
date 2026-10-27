@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOC Threat Monitoring and Incident Detection- Synthetic test data</title>
+<style>
+:root{--bg:#101c2d;--panel:#111e30;--border:#34485f;--text:#d5deeb;--muted:#8fa2ba;--cyan:#19c2bd;--metric:#203e63;--grid:#29394d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:12px Arial,Helvetica,sans-serif}
+.topbar{height:34px;background:#080f1b;border-bottom:1px solid #26364b;display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:#dce5f1}
+.brand{font-size:12px}.brand b{color:var(--cyan);margin-right:8px}
+.topright{color:#a4b4c8;font-size:11px}
+.toolbar{min-height:66px;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid #26364b}
+.title{font-size:14px;font-weight:600}.subtitle{font-size:10px;color:var(--muted);margin-top:5px}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pill{padding:7px 9px;border:1px solid #3b5068;border-radius:4px;background:#101b2c;color:#c8d5e5;font-size:10px}
+.pill.demo{color:#7ce0c4;border-color:#276b5c}
+main{padding:7px;max-width:1800px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+.panel{min-width:0;border:1px solid #34485f;border-radius:5px;overflow:hidden;background:var(--panel)}
+.panelhead{height:23px;padding:5px 7px;background:#132136;color:#c4d0e0;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid #27394f}
+.metric{background:var(--metric);height:280px}
+.metric .panelhead{background:#14263d}
+.metricbody{height:calc(100% - 23px);padding:16px;display:flex;flex-direction:column;justify-content:space-between}
+.metriclabel{font-size:clamp(15px,1.7vw,21px);color:#eef4fc}
+.metricvalue{text-align:right;font-size:56px;font-weight:300;line-height:1;color:#e4edf8}
+.chartpanel{height:280px}
+.chartwrap{padding:8px 8px 5px;height:calc(100% - 23px)}
+.chart{width:100%;height:220px;display:block}
+.gridline{stroke:var(--grid);stroke-width:1}
+.axis{fill:#91a4bc;font-size:8px;font-family:Arial,sans-serif}
+.bar{fill:var(--cyan)}
+.value{fill:#071d27;font-size:9px;font-weight:bold;text-anchor:middle}
+.axislabel{text-align:center;color:#91a4bc;font-size:9px;margin-top:-1px}
+.note{padding:13px 5px 3px;color:#91a4bc;font-size:10px;line-height:1.5}
+footer{text-align:center;color:#74869e;padding:13px;font-size:10px;border-top:1px solid #26364b;margin-top:8px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.metric{height:190px}.chartpanel{height:260px}.chart{height:200px}.metricvalue{font-size:48px}.toolbar{align-items:flex-start}main{padding:5px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand"><b>◆</b> My Elasticsearch project</div>
+  <div class="topright">SOC Dashboard &nbsp; | &nbsp; Synthetic test data</div>
+</div>
+<div class="toolbar">
+  <div>
+    <div class="title">SOC Threat Monitoring and Incident Detection- Synthetic test data</div>
+    <div class="subtitle">Centralized monitoring of authentication failures, DNS tunnelling, suspicious PowerShell activity, privilege escalation, and possible data exfiltration using synthetic security events.</div>
+  </div>
+  <div class="tools">
+    <div class="pill">Time range: Oct 12 – Oct 13, 2026</div>
+    <div class="pill demo">● SYNTHETIC DATA</div>
+  </div>
+</div>
+
+<main>
+<section class="grid">
+  <div class="panel metric">
+    <div class="panelhead">Privilege Escalation Events — Synthetic</div>
+    <div class="metricbody"><div class="metriclabel">Privilege Escalation Count</div><div class="metricvalue">2</div></div>
+  </div>
+  <div class="panel metric">
+    <div class="panelhead">Possible Data Exfiltration Indicators — Synthetic</div>
+    <div class="metricbody"><div class="metriclabel">Possible Exfiltration Count</div><div class="metricvalue">2</div></div>
+  </div>
+
+  <div class="panel chartpanel">
+    <div class="panelhead">SIEM – Credential Stuffing Detection</div>
+    <div class="chartwrap">
+      <svg class="chart" viewBox="0 0 500 220" preserveAspectRatio="none" role="img" aria-label="Credential stuffing detection: 4 events from source IP 192.0.2.25">
+        <g class="gridline">
+          <line x1="28" y1="16" x2="495" y2="16"/><line x1="28" y1="62" x2="495" y2="62"/>
+          <line x1="28" y1="108" x2="495" y2="108"/><line x1="28" y1="154" x2="495" y2="154"/>
+          <line x1="28" y1="198" x2="495" y2="198"/>
+        </g>
+        <g class="axis" text-anchor="end"><text x="21" y="19">4</text><text x="21" y="65">3</text><text x="21" y="111">2</text><text x="21" y="157">1</text><text x="21" y="201">0</text></g>
+        <rect class="bar" x="170" y="16" width="160" height="182"/>
+        <text class="value" x="250" y="112">4</text>
+        <text class="axis" x="250" y="211" text-anchor="middle">192.0.2.25</text>
+      </svg>
+      <div class="axislabel">Activity Type</div>
+    </div>
+  </div>
+
+  <div class="panel chartpanel">
+    <div class="panelhead">SIEM – DNS Tunnelling Detection</div>
+    <div class="chartwrap">
+      <svg class="chart" viewBox="0 0 500 220" preserveAspectRatio="none" role="img" aria-label="Five DNS query events, one each">
+        <g class="gridline">
+          <line x1="28" y1="16" x2="495" y2="16"/><line x1="28" y1="60" x2="495" y2="60"/>
+          <line x1="28" y1="104" x2="495" y2="104"/><line x1="28" y1="148" x2="495" y2="148"/>
+          <line x1="28" y1="190" x2="495" y2="190"/>
+        </g>
+        <g class="axis" text-anchor="end"><text x="22" y="19">1</text><text x="22" y="63">0.8</text><text x="22" y="107">0.6</text><text x="22" y="151">0.4</text><text x="22" y="193">0</text></g>
+        <g>
+          <rect class="bar" x="43" y="16" width="68" height="174"/><rect class="bar" x="131" y="16" width="68" height="174"/>
+          <rect class="bar" x="219" y="16" width="68" height="174"/><rect class="bar" x="307" y="16" width="68" height="174"/>
+          <rect class="bar" x="395" y="16" width="68" height="174"/>
+        </g>
+        <g class="value"><text x="77" y="106">1</text><text x="165" y="106">1</text><text x="253" y="106">1</text><text x="341" y="106">1</text><text x="429" y="106">1</text></g>
+        <g class="axis" text-anchor="middle">
+          <text x="77" y="201">aGVsbG9…</text><text x="165" y="201">c2Vj…</text><text x="253" y="201">dXNl…</text>
+          <text x="341" y="201">mail.example.com</text><text x="429" y="201">www.example.com</text>
+        </g>
+      </svg>
+      <div class="axislabel">DNS Query</div>
+    </div>
+  </div>
+
+  <div class="panel chartpanel">
+    <div class="panelhead">SIEM – Suspicious PowerShell Detection</div>
+    <div class="chartwrap">
+      <svg class="chart" viewBox="0 0 500 220" preserveAspectRatio="none" role="img" aria-label="Four PowerShell events, one each">
+        <g class="gridline">
+          <line x1="28" y1="16" x2="495" y2="16"/><line x1="28" y1="60" x2="495" y2="60"/>
+          <line x1="28" y1="104" x2="495" y2="104"/><line x1="28" y1="148" x2="495" y2="148"/>
+          <line x1="28" y1="190" x2="495" y2="190"/>
+        </g>
+        <g class="axis" text-anchor="end"><text x="22" y="19">1</text><text x="22" y="63">0.8</text><text x="22" y="107">0.6</text><text x="22" y="151">0.4</text><text x="22" y="193">0</text></g>
+        <g>
+          <rect class="bar" x="43" y="16" width="83" height="174"/><rect class="bar" x="143" y="16" width="83" height="174"/>
+          <rect class="bar" x="243" y="16" width="83" height="174"/><rect class="bar" x="343" y="16" width="83" height="174"/>
+        </g>
+        <g class="value"><text x="84" y="106">1</text><text x="184" y="106">1</text><text x="284" y="106">1</text><text x="384" y="106">1</text></g>
+        <g class="axis" text-anchor="middle">
+          <text x="84" y="201">Get-Process</text><text x="184" y="201">Get-Service</text>
+          <text x="284" y="201">powershell.exe -EncodedCommand</text><text x="384" y="201">powershell.exe -ExecutionPolicy Bypass</text>
+        </g>
+      </svg>
+      <div class="axislabel">Command</div>
+    </div>
+  </div>
+
+  <div class="panel chartpanel">
+    <div class="panelhead">SOC - Failed Login Attempts by Source IP ⓘ</div>
+    <div class="chartwrap">
+      <svg class="chart" viewBox="0 0 500 220" preserveAspectRatio="none" role="img" aria-label="Four failed login attempts from source IP 192.0.2.25">
+        <g class="gridline">
+          <line x1="28" y1="16" x2="495" y2="16"/><line x1="28" y1="62" x2="495" y2="62"/>
+          <line x1="28" y1="108" x2="495" y2="108"/><line x1="28" y1="154" x2="495" y2="154"/>
+          <line x1="28" y1="198" x2="495" y2="198"/>
+        </g>
+        <g class="axis" text-anchor="end"><text x="21" y="19">4</text><text x="21" y="65">3</text><text x="21" y="111">2</text><text x="21" y="157">1</text><text x="21" y="201">0</text></g>
+        <rect class="bar" x="170" y="16" width="160" height="182"/>
+        <text class="value" x="250" y="112">4</text>
+        <text class="axis" x="250" y="211" text-anchor="middle">192.0.2.25</text>
+      </svg>
+      <div class="axislabel">Source IP</div>
+    </div>
+  </div>
+
+  <div class="panel chartpanel">
+    <div class="panelhead">Privilege Escalation Monitoring — Synthetic Events</div>
+    <div class="chartwrap">
+      <svg class="chart" viewBox="0 0 500 220" preserveAspectRatio="none" role="img" aria-label="Two privilege escalation synthetic indicators">
+        <g class="gridline">
+          <line x1="28" y1="16" x2="495" y2="16"/><line x1="28" y1="60" x2="495" y2="60"/>
+          <line x1="28" y1="104" x2="495" y2="104"/><line x1="28" y1="148" x2="495" y2="148"/>
+          <line x1="28" y1="190" x2="495" y2="190"/>
+        </g>
+        <g class="axis" text-anchor="end"><text x="22" y="19">1</text><text x="22" y="63">0.8</text><text x="22" y="107">0.6</text><text x="22" y="151">0.4</text><text x="22" y="193">0</text></g>
+        <rect class="bar" x="75" y="16" width="145" height="174"/><rect class="bar" x="285" y="16" width="145" height="174"/>
+        <g class="value"><text x="147" y="106">1</text><text x="357" y="106">1</text></g>
+        <g class="axis" text-anchor="middle"><text x="147" y="201">sudo_privileged_command</text><text x="357" y="201">unexpected_admin_group_change</text></g>
+      </svg>
+      <div class="axislabel">Activity Type</div>
+    </div>
+  </div>
+
+  <div class="panel chartpanel">
+    <div class="panelhead">Possible Data Exfiltration Monitoring — Synthetic Indicator</div>
+    <div class="chartwrap">
+      <svg class="chart" viewBox="0 0 500 220" preserveAspectRatio="none" role="img" aria-label="Two possible data exfiltration synthetic indicators">
+        <g class="gridline">
+          <line x1="28" y1="16" x2="495" y2="16"/><line x1="28" y1="60" x2="495" y2="60"/>
+          <line x1="28" y1="104" x2="495" y2="104"/><line x1="28" y1="148" x2="495" y2="148"/>
+          <line x1="28" y1="190" x2="495" y2="190"/>
+        </g>
+        <g class="axis" text-anchor="end"><text x="22" y="19">1</text><text x="22" y="63">0.8</text><text x="22" y="107">0.6</text><text x="22" y="151">0.4</text><text x="22" y="193">0</text></g>
+        <rect class="bar" x="75" y="16" width="145" height="174"/><rect class="bar" x="285" y="16" width="145" height="174"/>
+        <g class="value"><text x="147" y="106">1</text><text x="357" y="106">1</text></g>
+        <g class="axis" text-anchor="middle"><text x="147" y="201">suspicious_dns_tunneling_indicator</text><text x="357" y="201">unusually_large_outbound_transfer</text></g>
+      </svg>
+      <div class="axislabel">Activity Type</div>
+    </div>
+  </div>
+</section>
+<div class="note">Description: Centralized monitoring of authentication failures, DNS tunnelling, suspicious PowerShell activity, privilege escalation, and possible data exfiltration using Elastic Cloud and synthetic security events.<br>
+All events shown are synthetic test data. Indicators do not prove that a real attack or data exfiltration occurred. This public demo is a static recreation and is not connected to live Elastic Cloud data.</div>
+</main>
+<footer>SOC Threat Monitoring and Incident Detection- Synthetic test data</footer>
+</body>
+</html>
